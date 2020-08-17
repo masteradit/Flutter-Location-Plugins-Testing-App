@@ -1,4 +1,4 @@
 class Routes {
   static const String homePage = 'homePage';
-  static const String locationPage = 'locationPage';
+  static const String locationAndGeocoderPage = 'locationAndGeocoderPage';
 }

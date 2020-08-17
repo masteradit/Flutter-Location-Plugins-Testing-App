@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       initialRoute: Routes.homePage,
       routes: {
         Routes.homePage: (context) => HomePage(),
-        Routes.locationPage: (context) => LocationPage(),
+        Routes.locationAndGeocoderPage: (context) => LocationAndGeocoderPage(),
       },
     );
   }

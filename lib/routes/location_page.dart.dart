@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:geocoder/geocoder.dart';
 import 'package:location/location.dart';
 
-class LocationPage extends StatefulWidget {
+class LocationAndGeocoderPage extends StatefulWidget {
   @override
-  _LocationPageState createState() => _LocationPageState();
+  _LocationAndGeocoderPageState createState() =>
+      _LocationAndGeocoderPageState();
 }
 
-class _LocationPageState extends State<LocationPage> {
+class _LocationAndGeocoderPageState extends State<LocationAndGeocoderPage> {
   String _lat = '';
   String _long = '';
   String _address = '';
