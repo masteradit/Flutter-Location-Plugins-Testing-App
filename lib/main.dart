@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'config/routes.dart';
 import 'routes/home_page.dart';
+import 'routes/location_page.dart.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       initialRoute: Routes.homePage,
       routes: {
         Routes.homePage: (context) => HomePage(),
+        Routes.locationPage: (context) => LocationPage(),
       },
     );
   }

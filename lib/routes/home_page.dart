@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../config/routes.dart';
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,7 +13,8 @@ class HomePage extends StatelessWidget {
         padding: EdgeInsets.all(20.0),
         children: [
           RaisedButton(
-            onPressed: () {},
+            onPressed: () =>
+                Navigator.of(context).pushNamed(Routes.locationPage),
             child: Text('Test'),
           ),
           SizedBox(height: 20.0),
