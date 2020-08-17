@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:geocoder/geocoder.dart';
 import 'package:location/location.dart';
 
 class LocationPage extends StatefulWidget {
@@ -9,6 +10,7 @@ class LocationPage extends StatefulWidget {
 class _LocationPageState extends State<LocationPage> {
   String _lat = '';
   String _long = '';
+  String _address = '';
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +29,10 @@ class _LocationPageState extends State<LocationPage> {
               RaisedButton(
                 onPressed: () async {
                   LocationData locationData = await _getLocation();
+                  _address = await _getAddressFromCoordinates(
+                    latitude: locationData?.latitude,
+                    longitude: locationData?.longitude,
+                  );
                   setState(() {
                     _lat = locationData?.latitude.toString();
                     _long = locationData?.longitude.toString();
@@ -34,6 +40,7 @@ class _LocationPageState extends State<LocationPage> {
                 },
                 child: Text('Get location'),
               ),
+              Text('Address = $_address'),
             ],
           ),
         ),
@@ -67,5 +74,16 @@ class _LocationPageState extends State<LocationPage> {
     _locationData = await location.getLocation();
 
     return _locationData;
+  }
+
+  Future<String> _getAddressFromCoordinates({
+    @required double latitude,
+    @required double longitude,
+  }) async {
+    Coordinates coordinates = Coordinates(latitude, latitude);
+    List<Address> addresses =
+        await Geocoder.local.findAddressesFromCoordinates(coordinates);
+
+    return addresses.first.addressLine;
   }
 }
