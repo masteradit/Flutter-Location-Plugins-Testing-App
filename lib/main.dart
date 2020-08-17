@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'config/routes.dart';
 import 'routes/home_page.dart';
-import 'routes/location_page.dart.dart';
+import 'routes/location_and_geocoder_page.dart.dart';
 
 void main() {
   runApp(MyApp());
