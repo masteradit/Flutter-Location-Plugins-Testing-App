@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
           RaisedButton(
             onPressed: () =>
                 Navigator.of(context).pushNamed(Routes.locationPage),
-            child: Text('Test'),
+            child: Text('location'),
           ),
           SizedBox(height: 20.0),
           RaisedButton(
