@@ -49,7 +49,9 @@ class _GeolocatorPageState extends State<GeolocatorPage> {
         address =
             '$name$thoroughfare$subLocality$locality$administrativeArea$country$postalCode';
       });
-    } catch (e) {}
+    } catch (e) {
+      print(e);
+    }
   }
 
   @override
