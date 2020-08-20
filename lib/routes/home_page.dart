@@ -19,8 +19,9 @@ class HomePage extends StatelessWidget {
           ),
           SizedBox(height: 20.0),
           RaisedButton(
-            onPressed: () {},
-            child: Text('Test'),
+            onPressed: () =>
+                Navigator.of(context).pushNamed(Routes.geolocatorPage),
+            child: Text('geolocator'),
           ),
           SizedBox(height: 20.0),
           RaisedButton(

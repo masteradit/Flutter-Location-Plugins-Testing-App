@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'config/routes.dart';
+import 'routes/geolocator_page.dart';
 import 'routes/home_page.dart';
 import 'routes/location_and_geocoder_page.dart.dart';
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       routes: {
         Routes.homePage: (context) => HomePage(),
         Routes.locationAndGeocoderPage: (context) => LocationAndGeocoderPage(),
+        Routes.geolocatorPage: (context) => GeolocatorPage(),
       },
     );
   }
