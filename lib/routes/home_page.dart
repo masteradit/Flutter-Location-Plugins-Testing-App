@@ -23,21 +23,6 @@ class HomePage extends StatelessWidget {
                 Navigator.of(context).pushNamed(Routes.geolocatorPage),
             child: Text('geolocator'),
           ),
-          SizedBox(height: 20.0),
-          RaisedButton(
-            onPressed: () {},
-            child: Text('Test'),
-          ),
-          SizedBox(height: 20.0),
-          RaisedButton(
-            onPressed: () {},
-            child: Text('Test'),
-          ),
-          SizedBox(height: 20.0),
-          RaisedButton(
-            onPressed: () {},
-            child: Text('Test'),
-          ),
         ],
       ),
     );

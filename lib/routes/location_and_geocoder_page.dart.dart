@@ -17,7 +17,7 @@ class _LocationAndGeocoderPageState extends State<LocationAndGeocoderPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('location plugin'),
+        title: Text('location + geocoder plugin'),
       ),
       body: Padding(
         padding: EdgeInsets.all(20.0),
